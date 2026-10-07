@@ -14,7 +14,7 @@ Cost and margin of every customer invoice and credit note, line by line, with bi
 ## How to use it
 
 1. Go to Invoicing > Configuration > Settings, section Invoice Cost & Margin: compute on confirmation (on by default), include operations, cost of purchased products.
-2. Optionally, on a product: tab Accounting, section Invoice Cost & Margin - exclude it, give it a fixed cost or keep its bill of materials closed.
+2. Optionally, on a product: tab General Information, section Invoice Cost & Margin - exclude it, give it a fixed cost or keep its bill of materials closed.
 3. Confirm a customer invoice. Open the tab Cost & Margin: products cost, extra costs, margin and margin %, cost of each line and where it comes from.
 4. Add Extra Costs on that tab if needed; the margin is updated at once. The invoice list has optional Margin columns for totals.
 
