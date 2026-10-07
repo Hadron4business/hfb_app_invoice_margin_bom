@@ -45,7 +45,7 @@ The cost is a snapshot: computed when the invoice is confirmed (optional) or
 with a button, so later price changes do not rewrite history. A scheduled
 action can backfill older invoices.
 """,
-    'version': "18.0.1.0.0",
+    'version': "18.0.1.0.1",
     'author': "Hadron for Business sp. z o.o.",
     'website': "http://hadronforbusiness.com",
     'license': "OPL-1",
