@@ -1,0 +1,577 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hfb_app_invoice_margin_bom
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-07 10:24+0000\n"
+"PO-Revision-Date: 2026-10-07 10:24+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: hfb_app_invoice_margin_bom
+#. odoo-python
+#: code:addons/hfb_app_invoice_margin_bom/models/product.py:0
+#, python-format
+msgid "%s: no Cost and no bill of materials."
+msgstr "%s: brak kosztu i brak zestawienia materiałowego."
+
+#. module: hfb_app_invoice_margin_bom
+#. odoo-python
+#: code:addons/hfb_app_invoice_margin_bom/models/product.py:0
+#, python-format
+msgid "%s: no confirmed purchase order - product Cost used instead."
+msgstr "%s: brak potwierdzonego zamówienia zakupu - użyto kosztu produktu."
+
+#. module: hfb_app_invoice_margin_bom
+#. odoo-python
+#: code:addons/hfb_app_invoice_margin_bom/models/product.py:0
+#, python-format
+msgid ""
+"%s: recursive or too deep bill of materials - product Cost used instead."
+msgstr ""
+"%s: zapętlone lub zbyt głębokie zestawienie materiałowe - użyto kosztu "
+"produktu."
+
+#. module: hfb_app_invoice_margin_bom
+#. odoo-python
+#: code:addons/hfb_app_invoice_margin_bom/models/product.py:0
+#, python-format
+msgid "%s: the bill of materials produces 0 - 1 assumed."
+msgstr "%s: zestawienie materiałowe daje ilość 0 - przyjęto 1."
+
+#. module: hfb_app_invoice_margin_bom
+#. odoo-python
+#: code:addons/hfb_app_invoice_margin_bom/models/product.py:0
+#, python-format
+msgid "%s: the fixed cost is 0."
+msgstr "%s: koszt stały wynosi 0."
+
+#. module: hfb_app_invoice_margin_bom
+#: model_terms:ir.ui.view,arch_db:hfb_app_invoice_margin_bom.res_config_settings_view_form_bom_margin
+msgid ""
+"Add the cost of the operations (work centers) to the cost of manufactured "
+"products"
+msgstr ""
+"Doliczaj koszt operacji (gniazd roboczych) do kosztu produktów wytwarzanych"
+
+#. module: hfb_app_invoice_margin_bom
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_account_move_extra_cost__amount
+msgid "Amount"
+msgstr "Kwota"
+
+#. module: hfb_app_invoice_margin_bom
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_account_move_extra_cost__amount_move_currency
+msgid "Amount in Invoice Currency"
+msgstr "Kwota w walucie faktury"
+
+#. module: hfb_app_invoice_margin_bom
+#: model:ir.model,name:hfb_app_invoice_margin_bom.model_mrp_bom
+msgid "Bill of Material"
+msgstr "Zestawienie materiałowe"
+
+#. module: hfb_app_invoice_margin_bom
+#: model:ir.model.fields.selection,name:hfb_app_invoice_margin_bom.selection__account_move_line__bom_cost_source__bom
+msgid "Bill of Materials"
+msgstr "Zestawienie materiałowe"
+
+#. module: hfb_app_invoice_margin_bom
+#: model:ir.model,name:hfb_app_invoice_margin_bom.model_res_company
+msgid "Companies"
+msgstr "Firmy"
+
+#. module: hfb_app_invoice_margin_bom
+#: model:ir.model.fields.selection,name:hfb_app_invoice_margin_bom.selection__product_template__bom_cost_leaf_source__default
+msgid "Company Setting"
+msgstr "Ustawienie firmy"
+
+#. module: hfb_app_invoice_margin_bom
+#: model_terms:ir.ui.view,arch_db:hfb_app_invoice_margin_bom.view_move_form_bom_margin
+msgid "Compute Cost"
+msgstr "Oblicz koszt"
+
+#. module: hfb_app_invoice_margin_bom
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_res_company__bom_margin_auto
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_res_config_settings__bom_margin_auto
+msgid "Compute Invoice Cost on Confirmation"
+msgstr "Obliczaj koszt faktury przy zatwierdzeniu"
+
+#. module: hfb_app_invoice_margin_bom
+#: model_terms:ir.ui.view,arch_db:hfb_app_invoice_margin_bom.res_config_settings_view_form_bom_margin
+msgid ""
+"Compute cost and margin of customer invoices and credit notes when they are "
+"confirmed"
+msgstr ""
+"Obliczaj koszt i marżę faktur sprzedaży i korekt przy ich zatwierdzeniu"
+
+#. module: hfb_app_invoice_margin_bom
+#: model_terms:ir.ui.view,arch_db:hfb_app_invoice_margin_bom.view_move_form_bom_margin
+msgid "Compute for All Invoices of the Orders"
+msgstr "Oblicz dla wszystkich faktur zamówień"
+
+#. module: hfb_app_invoice_margin_bom
+#: model_terms:ir.ui.view,arch_db:hfb_app_invoice_margin_bom.view_move_form_bom_margin
+msgid "Computed on"
+msgstr "Obliczono"
+
+#. module: hfb_app_invoice_margin_bom
+#: model:ir.model,name:hfb_app_invoice_margin_bom.model_res_config_settings
+msgid "Config Settings"
+msgstr "Konfiguracja ustawień"
+
+#. module: hfb_app_invoice_margin_bom
+#: model:ir.model.fields,help:hfb_app_invoice_margin_bom.field_product_product__bom_cost_fixed_currency_id
+#: model:ir.model.fields,help:hfb_app_invoice_margin_bom.field_product_template__bom_cost_fixed_currency_id
+msgid "Converted to the company currency at the invoice date."
+msgstr "Przeliczany na walutę firmy po kursie z daty faktury."
+
+#. module: hfb_app_invoice_margin_bom
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_account_move_line__bom_cost
+msgid "Cost"
+msgstr "Koszt"
+
+#. module: hfb_app_invoice_margin_bom
+#: model_terms:ir.ui.view,arch_db:hfb_app_invoice_margin_bom.view_move_form_bom_margin
+msgid "Cost & Margin"
+msgstr "Koszt i marża"
+
+#. module: hfb_app_invoice_margin_bom
+#: model:ir.model.fields,help:hfb_app_invoice_margin_bom.field_product_product__bom_cost_skip
+#: model:ir.model.fields,help:hfb_app_invoice_margin_bom.field_product_template__bom_cost_skip
+msgid ""
+"Cost 0 in the invoice margin, both as an invoice line and as a component of "
+"a bill of materials (e.g. a re-invoiced service)."
+msgstr ""
+"Koszt 0 w marży faktury, zarówno jako pozycja faktury, jak i składnik "
+"zestawienia materiałowego (np. refakturowana usługa)."
+
+#. module: hfb_app_invoice_margin_bom
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_account_bank_statement_line__bom_cost_uid
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_account_move__bom_cost_uid
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_account_payment__bom_cost_uid
+msgid "Cost Computed By"
+msgstr "Koszt obliczył(a)"
+
+#. module: hfb_app_invoice_margin_bom
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_account_bank_statement_line__bom_cost_date
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_account_move__bom_cost_date
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_account_payment__bom_cost_date
+msgid "Cost Computed On"
+msgstr "Data obliczenia kosztu"
+
+#. module: hfb_app_invoice_margin_bom
+#: model_terms:ir.ui.view,arch_db:hfb_app_invoice_margin_bom.view_account_invoice_filter_bom_margin
+msgid "Cost Not Computed"
+msgstr "Koszt nieobliczony"
+
+#. module: hfb_app_invoice_margin_bom
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_account_move_line__bom_cost_source
+msgid "Cost Source"
+msgstr "Źródło kosztu"
+
+#. module: hfb_app_invoice_margin_bom
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_account_bank_statement_line__bom_cost_warning
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_account_move__bom_cost_warning
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_account_payment__bom_cost_warning
+msgid "Cost Warnings"
+msgstr "Ostrzeżenia kosztu"
+
+#. module: hfb_app_invoice_margin_bom
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_res_company__bom_margin_leaf_source
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_res_config_settings__bom_margin_leaf_source
+#: model_terms:ir.ui.view,arch_db:hfb_app_invoice_margin_bom.res_config_settings_view_form_bom_margin
+msgid "Cost of Purchased Products"
+msgstr "Koszt produktów kupowanych"
+
+#. module: hfb_app_invoice_margin_bom
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_account_bank_statement_line__bom_line_ids
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_account_move__bom_line_ids
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_account_payment__bom_line_ids
+#: model_terms:ir.ui.view,arch_db:hfb_app_invoice_margin_bom.view_move_form_bom_margin
+msgid "Cost per Line"
+msgstr "Koszt pozycji"
+
+#. module: hfb_app_invoice_margin_bom
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_product_product__bom_cost_leaf_source
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_product_template__bom_cost_leaf_source
+msgid "Cost when Purchased"
+msgstr "Koszt, gdy kupowany"
+
+#. module: hfb_app_invoice_margin_bom
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_account_move_extra_cost__create_uid
+msgid "Created by"
+msgstr "Utworzone przez"
+
+#. module: hfb_app_invoice_margin_bom
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_account_move_extra_cost__create_date
+msgid "Created on"
+msgstr "Data utworzenia"
+
+#. module: hfb_app_invoice_margin_bom
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_account_move_extra_cost__currency_id
+msgid "Currency"
+msgstr "Waluta"
+
+#. module: hfb_app_invoice_margin_bom
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_account_move_extra_cost__name
+msgid "Description"
+msgstr "Opis"
+
+#. module: hfb_app_invoice_margin_bom
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_account_move_extra_cost__display_name
+msgid "Display Name"
+msgstr "Nazwa wyświetlana"
+
+#. module: hfb_app_invoice_margin_bom
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_product_product__bom_cost_no_explode
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_product_template__bom_cost_no_explode
+msgid "Do Not Explode Bill of Materials"
+msgstr "Nie rozwijaj zestawienia materiałowego"
+
+#. module: hfb_app_invoice_margin_bom
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_product_product__bom_cost_skip
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_product_template__bom_cost_skip
+msgid "Exclude from Invoice Cost"
+msgstr "Pomiń w koszcie faktury"
+
+#. module: hfb_app_invoice_margin_bom
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_account_bank_statement_line__bom_extra_cost_ids
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_account_move__bom_extra_cost_ids
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_account_payment__bom_extra_cost_ids
+#: model_terms:ir.ui.view,arch_db:hfb_app_invoice_margin_bom.view_move_form_bom_margin
+msgid "Extra Costs"
+msgstr "Koszty dodatkowe"
+
+#. module: hfb_app_invoice_margin_bom
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_account_bank_statement_line__bom_cost_extra
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_account_move__bom_cost_extra
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_account_payment__bom_cost_extra
+msgid "Extra Costs Total"
+msgstr "Suma kosztów dodatkowych"
+
+#. module: hfb_app_invoice_margin_bom
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_product_product__bom_cost_fixed
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_product_template__bom_cost_fixed
+#: model:ir.model.fields.selection,name:hfb_app_invoice_margin_bom.selection__account_move_line__bom_cost_source__fixed
+msgid "Fixed Cost"
+msgstr "Koszt stały"
+
+#. module: hfb_app_invoice_margin_bom
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_product_product__bom_cost_fixed_currency_id
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_product_template__bom_cost_fixed_currency_id
+msgid "Fixed Cost Currency"
+msgstr "Waluta kosztu stałego"
+
+#. module: hfb_app_invoice_margin_bom
+#: model:ir.model.fields,help:hfb_app_invoice_margin_bom.field_product_product__bom_cost_fixed
+#: model:ir.model.fields,help:hfb_app_invoice_margin_bom.field_product_template__bom_cost_fixed
+msgid "Fixed cost per unit of the product unit of measure."
+msgstr "Koszt stały za jednostkę miary produktu."
+
+#. module: hfb_app_invoice_margin_bom
+#: model:ir.model.fields,help:hfb_app_invoice_margin_bom.field_product_product__bom_cost_leaf_source
+#: model:ir.model.fields,help:hfb_app_invoice_margin_bom.field_product_template__bom_cost_leaf_source
+msgid "How the product is costed when it has no bill of materials to explode."
+msgstr ""
+"Jak wyceniany jest produkt, gdy nie ma zestawienia materiałowego do "
+"rozwinięcia."
+
+#. module: hfb_app_invoice_margin_bom
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_account_move_extra_cost__id
+msgid "ID"
+msgstr "ID"
+
+#. module: hfb_app_invoice_margin_bom
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_res_company__bom_margin_operations
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_res_config_settings__bom_margin_operations
+msgid "Include Operations in BoM Cost"
+msgstr "Uwzględniaj operacje w koszcie BoM"
+
+#. module: hfb_app_invoice_margin_bom
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_account_move_extra_cost__move_id
+msgid "Invoice"
+msgstr "Faktura"
+
+#. module: hfb_app_invoice_margin_bom
+#: model_terms:ir.ui.view,arch_db:hfb_app_invoice_margin_bom.product_template_form_view_bom_margin
+#: model_terms:ir.ui.view,arch_db:hfb_app_invoice_margin_bom.res_config_settings_view_form_bom_margin
+msgid "Invoice Cost & Margin"
+msgstr "Koszt i marża faktury"
+
+#. module: hfb_app_invoice_margin_bom
+#: model:ir.actions.server,name:hfb_app_invoice_margin_bom.ir_cron_bom_margin_backfill_ir_actions_server
+msgid "Invoice Cost & Margin: compute older invoices"
+msgstr "Koszt i marża faktur: oblicz starsze faktury"
+
+#. module: hfb_app_invoice_margin_bom
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_account_move_extra_cost__move_currency_id
+msgid "Invoice Currency"
+msgstr "Waluta faktury"
+
+#. module: hfb_app_invoice_margin_bom
+#: model:ir.model,name:hfb_app_invoice_margin_bom.model_account_move_extra_cost
+msgid "Invoice Extra Cost"
+msgstr "Koszt dodatkowy faktury"
+
+#. module: hfb_app_invoice_margin_bom
+#: model:ir.model,name:hfb_app_invoice_margin_bom.model_account_move
+msgid "Journal Entry"
+msgstr "Zapis dziennika"
+
+#. module: hfb_app_invoice_margin_bom
+#: model:ir.model,name:hfb_app_invoice_margin_bom.model_account_move_line
+msgid "Journal Item"
+msgstr "Pozycja zapisu"
+
+#. module: hfb_app_invoice_margin_bom
+#: model:ir.model.fields.selection,name:hfb_app_invoice_margin_bom.selection__account_move_line__bom_cost_source__last_purchase
+#: model:ir.model.fields.selection,name:hfb_app_invoice_margin_bom.selection__product_template__bom_cost_leaf_source__last_purchase
+#: model:ir.model.fields.selection,name:hfb_app_invoice_margin_bom.selection__res_company__bom_margin_leaf_source__last_purchase
+msgid "Last Purchase Price"
+msgstr "Ostatnia cena zakupu"
+
+#. module: hfb_app_invoice_margin_bom
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_account_move_extra_cost__write_uid
+msgid "Last Updated by"
+msgstr "Ostatnio aktualizowane przez"
+
+#. module: hfb_app_invoice_margin_bom
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_account_move_extra_cost__write_date
+msgid "Last Updated on"
+msgstr "Data ostatniej aktualizacji"
+
+#. module: hfb_app_invoice_margin_bom
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_account_bank_statement_line__bom_margin
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_account_move__bom_margin
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_account_move_line__bom_margin
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_account_payment__bom_margin
+msgid "Margin"
+msgstr "Marża"
+
+#. module: hfb_app_invoice_margin_bom
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_account_bank_statement_line__bom_margin_percent
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_account_move__bom_margin_percent
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_account_move_line__bom_margin_percent
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_account_payment__bom_margin_percent
+msgid "Margin (%)"
+msgstr "Marża (%)"
+
+#. module: hfb_app_invoice_margin_bom
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_account_bank_statement_line__bom_margin_signed
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_account_move__bom_margin_signed
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_account_payment__bom_margin_signed
+msgid "Margin (Company Currency)"
+msgstr "Marża (waluta firmy)"
+
+#. module: hfb_app_invoice_margin_bom
+#: model:ir.model.fields,help:hfb_app_invoice_margin_bom.field_account_bank_statement_line__bom_margin_signed
+#: model:ir.model.fields,help:hfb_app_invoice_margin_bom.field_account_move__bom_margin_signed
+#: model:ir.model.fields,help:hfb_app_invoice_margin_bom.field_account_payment__bom_margin_signed
+msgid ""
+"Margin in the company currency, negative for credit notes - for totals in "
+"lists and reports."
+msgstr ""
+"Marża w walucie firmy, ujemna dla korekt - do sum na listach i w raportach."
+
+#. module: hfb_app_invoice_margin_bom
+#: model:ir.model.fields.selection,name:hfb_app_invoice_margin_bom.selection__account_move_line__bom_cost_source__none
+msgid "No Product"
+msgstr "Brak produktu"
+
+#. module: hfb_app_invoice_margin_bom
+#. odoo-python
+#: code:addons/hfb_app_invoice_margin_bom/models/account_move.py:0
+#, python-format
+msgid "Not included (cost not computed yet): %s"
+msgstr "Nieuwzględnione (koszt jeszcze nieobliczony): %s"
+
+#. module: hfb_app_invoice_margin_bom
+#. odoo-python
+#: code:addons/hfb_app_invoice_margin_bom/models/account_move.py:0
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_account_bank_statement_line__bom_so_invoice_ids
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_account_move__bom_so_invoice_ids
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_account_payment__bom_so_invoice_ids
+#, python-format
+msgid "Order Invoices"
+msgstr "Faktury zamówień"
+
+#. module: hfb_app_invoice_margin_bom
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_account_bank_statement_line__bom_so_invoice_count
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_account_move__bom_so_invoice_count
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_account_payment__bom_so_invoice_count
+msgid "Order Invoices Count"
+msgstr "Liczba faktur zamówień"
+
+#. module: hfb_app_invoice_margin_bom
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_account_bank_statement_line__bom_so_margin_percent
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_account_move__bom_so_margin_percent
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_account_payment__bom_so_margin_percent
+msgid "Orders Average Margin (%)"
+msgstr "Średnia marża zamówień (%)"
+
+#. module: hfb_app_invoice_margin_bom
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_account_bank_statement_line__bom_so_margin
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_account_move__bom_so_margin
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_account_payment__bom_so_margin
+msgid "Orders Margin"
+msgstr "Marża zamówień"
+
+#. module: hfb_app_invoice_margin_bom
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_account_bank_statement_line__bom_so_warning
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_account_move__bom_so_warning
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_account_payment__bom_so_warning
+msgid "Orders Margin Warning"
+msgstr "Ostrzeżenie marży zamówień"
+
+#. module: hfb_app_invoice_margin_bom
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_account_bank_statement_line__bom_so_cost
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_account_move__bom_so_cost
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_account_payment__bom_so_cost
+msgid "Orders Total Cost"
+msgstr "Koszt całkowity zamówień"
+
+#. module: hfb_app_invoice_margin_bom
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_account_bank_statement_line__bom_so_amount_untaxed
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_account_move__bom_so_amount_untaxed
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_account_payment__bom_so_amount_untaxed
+msgid "Orders Untaxed Amount"
+msgstr "Kwota netto zamówień"
+
+#. module: hfb_app_invoice_margin_bom
+#: model:ir.model,name:hfb_app_invoice_margin_bom.model_product_template
+msgid "Product"
+msgstr "Produkt"
+
+#. module: hfb_app_invoice_margin_bom
+#: model:ir.model.fields.selection,name:hfb_app_invoice_margin_bom.selection__account_move_line__bom_cost_source__standard
+#: model:ir.model.fields.selection,name:hfb_app_invoice_margin_bom.selection__product_template__bom_cost_leaf_source__standard
+#: model:ir.model.fields.selection,name:hfb_app_invoice_margin_bom.selection__res_company__bom_margin_leaf_source__standard
+msgid "Product Cost"
+msgstr "Koszt produktu"
+
+#. module: hfb_app_invoice_margin_bom
+#: model:ir.model,name:hfb_app_invoice_margin_bom.model_product_product
+msgid "Product Variant"
+msgstr "Wariant produktu"
+
+#. module: hfb_app_invoice_margin_bom
+#: model:ir.model.fields,help:hfb_app_invoice_margin_bom.field_account_bank_statement_line__bom_line_ids
+#: model:ir.model.fields,help:hfb_app_invoice_margin_bom.field_account_move__bom_line_ids
+#: model:ir.model.fields,help:hfb_app_invoice_margin_bom.field_account_payment__bom_line_ids
+msgid "Product lines of the invoice with their cost and margin."
+msgstr "Pozycje produktowe faktury z kosztem i marżą."
+
+#. module: hfb_app_invoice_margin_bom
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_account_bank_statement_line__bom_cost_products
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_account_move__bom_cost_products
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_account_payment__bom_cost_products
+msgid "Products Cost"
+msgstr "Koszt produktów"
+
+#. module: hfb_app_invoice_margin_bom
+#: model_terms:ir.ui.view,arch_db:hfb_app_invoice_margin_bom.res_config_settings_view_form_bom_margin
+msgid ""
+"Products without a bill of materials: product Cost or price of the last "
+"confirmed purchase order"
+msgstr ""
+"Produkty bez zestawienia materiałowego: koszt produktu lub cena z ostatniego"
+" potwierdzonego zamówienia zakupu"
+
+#. module: hfb_app_invoice_margin_bom
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_account_bank_statement_line__bom_so_names
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_account_move__bom_so_names
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_account_payment__bom_so_names
+#: model_terms:ir.ui.view,arch_db:hfb_app_invoice_margin_bom.view_move_form_bom_margin
+msgid "Sales Orders"
+msgstr "Zamówienia sprzedaży"
+
+#. module: hfb_app_invoice_margin_bom
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_account_move_extra_cost__sequence
+msgid "Sequence"
+msgstr "Kolejność"
+
+#. module: hfb_app_invoice_margin_bom
+#: model:res.groups,name:hfb_app_invoice_margin_bom.group_invoice_margin
+msgid "Show Invoice Cost & Margin"
+msgstr "Pokazuj koszt i marżę faktur"
+
+#. module: hfb_app_invoice_margin_bom
+#: model:ir.model.fields.selection,name:hfb_app_invoice_margin_bom.selection__account_move_line__bom_cost_source__skipped
+msgid "Skipped"
+msgstr "Pominięty"
+
+#. module: hfb_app_invoice_margin_bom
+#: model_terms:ir.ui.view,arch_db:hfb_app_invoice_margin_bom.view_move_form_bom_margin
+msgid "This Invoice"
+msgstr "Ta faktura"
+
+#. module: hfb_app_invoice_margin_bom
+#: model_terms:ir.ui.view,arch_db:hfb_app_invoice_margin_bom.view_invoice_tree_bom_margin
+#: model_terms:ir.ui.view,arch_db:hfb_app_invoice_margin_bom.view_move_form_bom_margin
+#: model_terms:ir.ui.view,arch_db:hfb_app_invoice_margin_bom.view_move_line_tree_bom_margin
+msgid "Total"
+msgstr "Suma"
+
+#. module: hfb_app_invoice_margin_bom
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_account_bank_statement_line__bom_cost_total
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_account_move__bom_cost_total
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_account_payment__bom_cost_total
+msgid "Total Cost"
+msgstr "Koszt całkowity"
+
+#. module: hfb_app_invoice_margin_bom
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_account_move_line__bom_cost_unit
+msgid "Unit Cost"
+msgstr "Koszt jednostkowy"
+
+#. module: hfb_app_invoice_margin_bom
+#: model_terms:ir.ui.view,arch_db:hfb_app_invoice_margin_bom.view_move_line_tree_bom_margin
+msgid "Untaxed"
+msgstr "Netto"
+
+#. module: hfb_app_invoice_margin_bom
+#: model:ir.model.fields,help:hfb_app_invoice_margin_bom.field_account_bank_statement_line__bom_margin
+#: model:ir.model.fields,help:hfb_app_invoice_margin_bom.field_account_move__bom_margin
+#: model:ir.model.fields,help:hfb_app_invoice_margin_bom.field_account_payment__bom_margin
+msgid "Untaxed amount minus total cost."
+msgstr "Kwota netto minus koszt całkowity."
+
+#. module: hfb_app_invoice_margin_bom
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_product_product__bom_cost_fixed_ok
+#: model:ir.model.fields,field_description:hfb_app_invoice_margin_bom.field_product_template__bom_cost_fixed_ok
+msgid "Use a Fixed Cost"
+msgstr "Użyj kosztu stałego"
+
+#. module: hfb_app_invoice_margin_bom
+#: model:ir.model.fields,help:hfb_app_invoice_margin_bom.field_product_product__bom_cost_fixed_ok
+#: model:ir.model.fields,help:hfb_app_invoice_margin_bom.field_product_template__bom_cost_fixed_ok
+msgid ""
+"Use the fixed unit cost below instead of the bill of materials or the "
+"product Cost."
+msgstr ""
+"Użyj poniższego stałego kosztu jednostkowego zamiast zestawienia "
+"materiałowego lub kosztu produktu."
+
+#. module: hfb_app_invoice_margin_bom
+#: model:ir.model.fields,help:hfb_app_invoice_margin_bom.field_product_product__bom_cost_no_explode
+#: model:ir.model.fields,help:hfb_app_invoice_margin_bom.field_product_template__bom_cost_no_explode
+msgid "Use the product Cost even if the product has a bill of materials."
+msgstr ""
+"Używaj kosztu produktu, nawet jeśli produkt ma zestawienie materiałowe."
+
+#. module: hfb_app_invoice_margin_bom
+#: model_terms:ir.ui.view,arch_db:hfb_app_invoice_margin_bom.view_move_form_bom_margin
+msgid "by"
+msgstr "przez"
+
+#. module: hfb_app_invoice_margin_bom
+#: model_terms:ir.ui.view,arch_db:hfb_app_invoice_margin_bom.view_move_form_bom_margin
+msgid "e.g. Freight, customs"
+msgstr "np. Transport, cło"
