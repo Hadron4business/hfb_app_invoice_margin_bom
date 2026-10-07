@@ -4,9 +4,9 @@
     <record id="product_template_form_view_bom_margin" model="ir.ui.view">
         <field name="name">product.template.form.inherit.bom.margin</field>
         <field name="model">product.template</field>
-        <field name="inherit_id" ref="account.product_template_form_view"/>
+        <field name="inherit_id" ref="product.product_template_form_view"/>
         <field name="arch" type="xml">
-            <xpath expr="//page[@name='invoicing']" position="inside">
+            <xpath expr="//page[@name='general_information']" position="inside">
                 <group name="bom_margin" string="Invoice Cost &amp; Margin" groups="hfb_app_invoice_margin_bom.group_invoice_margin">
                     <group>
                         <field name="bom_cost_skip"/>
