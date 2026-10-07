@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_account_move_extra_cost_invoice,account.move.extra.cost invoicing,model_account_move_extra_cost,account.group_account_invoice,1,0,0,0
+access_account_move_extra_cost_margin,account.move.extra.cost margin,model_account_move_extra_cost,group_invoice_margin,1,1,1,1

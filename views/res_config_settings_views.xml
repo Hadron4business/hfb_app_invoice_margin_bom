@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="res_config_settings_view_form_bom_margin" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.bom.margin</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="account.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//block[@id='invoicing_settings']" position="after">
+                <block title="Invoice Cost &amp; Margin" id="bom_margin_settings">
+                    <setting id="bom_margin_auto" company_dependent="1"
+                             help="Compute cost and margin of customer invoices and credit notes when they are confirmed">
+                        <field name="bom_margin_auto"/>
+                    </setting>
+                    <setting id="bom_margin_operations" company_dependent="1"
+                             help="Add the cost of the operations (work centers) to the cost of manufactured products">
+                        <field name="bom_margin_operations"/>
+                    </setting>
+                    <setting id="bom_margin_leaf_source" company_dependent="1" string="Cost of Purchased Products"
+                             help="Products without a bill of materials: product Cost or price of the last confirmed purchase order">
+                        <field name="bom_margin_leaf_source" widget="radio"/>
+                    </setting>
+                </block>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

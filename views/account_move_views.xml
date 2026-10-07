@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_move_form_bom_margin" model="ir.ui.view">
+        <field name="name">account.move.form.inherit.bom.margin</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='invoice_line_ids']/tree/field[@name='price_subtotal']" position="after">
+                <field name="bom_cost" optional="hide" groups="hfb_app_invoice_margin_bom.group_invoice_margin"/>
+                <field name="bom_margin" optional="hide" groups="hfb_app_invoice_margin_bom.group_invoice_margin"/>
+                <field name="bom_margin_percent" optional="hide" groups="hfb_app_invoice_margin_bom.group_invoice_margin"/>
+            </xpath>
+            <xpath expr="//page[@id='other_tab']" position="after">
+                <page id="bom_margin_tab" name="bom_margin" string="Cost &amp; Margin"
+                      invisible="move_type not in ('out_invoice', 'out_refund')"
+                      groups="hfb_app_invoice_margin_bom.group_invoice_margin">
+                    <div class="mb-3">
+                        <button name="action_bom_margin_compute" type="object" string="Compute Cost"
+                                class="btn-secondary" icon="fa-calculator"/>
+                        <button name="action_bom_margin_compute_orders" type="object"
+                                string="Compute for All Invoices of the Orders" class="btn-link"
+                                invisible="not bom_so_invoice_count"/>
+                        <span class="text-muted ms-2" invisible="not bom_cost_date">
+                            Computed on <field name="bom_cost_date" class="oe_inline" readonly="1"/>
+                            by <field name="bom_cost_uid" class="oe_inline" readonly="1"/>
+                        </span>
+                    </div>
+                    <group>
+                        <group string="This Invoice">
+                            <field name="bom_cost_products"/>
+                            <field name="bom_cost_extra"/>
+                            <field name="bom_cost_total"/>
+                            <field name="bom_margin"/>
+                            <field name="bom_margin_percent"/>
+                        </group>
+                        <group string="Sales Orders" invisible="not bom_so_invoice_count">
+                            <field name="bom_so_names"/>
+                            <label for="bom_so_invoice_count"/>
+                            <div>
+                                <button name="action_bom_margin_open_invoices" type="object" class="btn-link p-0">
+                                    <field name="bom_so_invoice_count" class="oe_inline"/>
+                                </button>
+                            </div>
+                            <field name="bom_so_amount_untaxed"/>
+                            <field name="bom_so_cost"/>
+                            <field name="bom_so_margin"/>
+                            <field name="bom_so_margin_percent"/>
+                            <field name="bom_so_warning" invisible="not bom_so_warning" class="text-warning"/>
+                        </group>
+                    </group>
+                    <field name="bom_cost_warning" invisible="not bom_cost_warning" class="text-warning" readonly="1"/>
+                    <separator string="Cost per Line"/>
+                    <field name="bom_line_ids" readonly="1" nolabel="1"
+                           context="{'tree_view_ref': 'hfb_app_invoice_margin_bom.view_move_line_tree_bom_margin'}"/>
+                    <separator string="Extra Costs"/>
+                    <field name="bom_extra_cost_ids" nolabel="1">
+                        <tree editable="bottom">
+                            <field name="sequence" widget="handle"/>
+                            <field name="name" placeholder="e.g. Freight, customs"/>
+                            <field name="amount"/>
+                            <field name="currency_id" options="{'no_create': True}"/>
+                            <field name="amount_move_currency" sum="Total"/>
+                            <field name="move_currency_id" column_invisible="True"/>
+                        </tree>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_move_line_tree_bom_margin" model="ir.ui.view">
+        <field name="name">account.move.line.tree.bom.margin</field>
+        <field name="model">account.move.line</field>
+        <field name="priority">99</field>
+        <field name="arch" type="xml">
+            <tree create="0" delete="0">
+                <field name="display_type" column_invisible="True"/>
+                <field name="product_id"/>
+                <field name="quantity"/>
+                <field name="price_subtotal" string="Untaxed"/>
+                <field name="bom_cost_unit"/>
+                <field name="bom_cost" sum="Total"/>
+                <field name="bom_margin" sum="Total"/>
+                <field name="bom_margin_percent"/>
+                <field name="bom_cost_source"/>
+                <field name="currency_id" column_invisible="True"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_invoice_tree_bom_margin" model="ir.ui.view">
+        <field name="name">account.move.tree.inherit.bom.margin</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_invoice_tree"/>
+        <field name="arch" type="xml">
+            <field name="amount_untaxed_signed" position="after">
+                <field name="bom_margin_signed" optional="hide" sum="Total"
+                       groups="hfb_app_invoice_margin_bom.group_invoice_margin"/>
+                <field name="bom_margin_percent" optional="hide"
+                       groups="hfb_app_invoice_margin_bom.group_invoice_margin"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="view_account_invoice_filter_bom_margin" model="ir.ui.view">
+        <field name="name">account.move.search.inherit.bom.margin</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_account_invoice_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//filter[@name='cancel']" position="after">
+                <filter name="bom_cost_missing" string="Cost Not Computed"
+                        domain="[('bom_cost_date', '=', False), ('move_type', 'in', ('out_invoice', 'out_refund'))]"
+                        groups="hfb_app_invoice_margin_bom.group_invoice_margin"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
