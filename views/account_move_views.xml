@@ -6,7 +6,7 @@
         <field name="model">account.move</field>
         <field name="inherit_id" ref="account.view_move_form"/>
         <field name="arch" type="xml">
-            <xpath expr="//field[@name='invoice_line_ids']/tree/field[@name='price_subtotal']" position="after">
+            <xpath expr="//field[@name='invoice_line_ids']/list/field[@name='price_subtotal']" position="after">
                 <field name="bom_cost" optional="hide" groups="hfb_app_invoice_margin_bom.group_invoice_margin"/>
                 <field name="bom_margin" optional="hide" groups="hfb_app_invoice_margin_bom.group_invoice_margin"/>
                 <field name="bom_margin_percent" optional="hide" groups="hfb_app_invoice_margin_bom.group_invoice_margin"/>
@@ -52,17 +52,17 @@
                     <field name="bom_cost_warning" invisible="not bom_cost_warning" class="text-warning" readonly="1"/>
                     <separator string="Cost per Line"/>
                     <field name="bom_line_ids" readonly="1" nolabel="1"
-                           context="{'tree_view_ref': 'hfb_app_invoice_margin_bom.view_move_line_tree_bom_margin'}"/>
+                           context="{'list_view_ref': 'hfb_app_invoice_margin_bom.view_move_line_tree_bom_margin'}"/>
                     <separator string="Extra Costs"/>
                     <field name="bom_extra_cost_ids" nolabel="1">
-                        <tree editable="bottom">
+                        <list editable="bottom">
                             <field name="sequence" widget="handle"/>
                             <field name="name" placeholder="e.g. Freight, customs"/>
                             <field name="amount"/>
                             <field name="currency_id" options="{'no_create': True}"/>
                             <field name="amount_move_currency" sum="Total"/>
                             <field name="move_currency_id" column_invisible="True"/>
-                        </tree>
+                        </list>
                     </field>
                 </page>
             </xpath>
@@ -74,7 +74,7 @@
         <field name="model">account.move.line</field>
         <field name="priority">99</field>
         <field name="arch" type="xml">
-            <tree create="0" delete="0">
+            <list create="0" delete="0">
                 <field name="display_type" column_invisible="True"/>
                 <field name="product_id"/>
                 <field name="quantity"/>
@@ -85,7 +85,7 @@
                 <field name="bom_margin_percent"/>
                 <field name="bom_cost_source"/>
                 <field name="currency_id" column_invisible="True"/>
-            </tree>
+            </list>
         </field>
     </record>
 
@@ -94,7 +94,7 @@
         <field name="model">account.move</field>
         <field name="inherit_id" ref="account.view_invoice_tree"/>
         <field name="arch" type="xml">
-            <field name="amount_untaxed_signed" position="after">
+            <field name="amount_tax_signed" position="before">
                 <field name="bom_margin_signed" optional="hide" sum="Total"
                        groups="hfb_app_invoice_margin_bom.group_invoice_margin"/>
                 <field name="bom_margin_percent" optional="hide"
