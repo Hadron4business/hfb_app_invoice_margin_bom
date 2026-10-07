@@ -16,7 +16,7 @@
 # all copies or substantial portions of the Software.
 #
 #################################################################################
-"""	@version	18.0.1.0.0
+"""	@version	19.0.1.0.0
 	@owner  Hadron for Business
 	@author Hadron for Business sp. z o.o.
 	@date   2026.10.07
@@ -27,7 +27,6 @@
 	hour).
 """
 from odoo import models
-from odoo.tools import float_round
 
 
 class MrpBom(models.Model):
@@ -36,19 +35,14 @@ class MrpBom(models.Model):
     def _bom_margin_operations_cost(self, product):
         """Cost of the operations of one run of this bill of materials, in the company currency.
 
-        Same duration formula as Odoo's BoM Structure & Cost report.
+        Uses the operation cost computed by Odoo, as the BoM Structure & Cost report does.
         """
         self.ensure_one()
         total = 0.0
         for operation in self.operation_ids:
             if operation._skip_operation_line(product):
                 continue
-            workcenter = operation.workcenter_id
-            capacity = workcenter._get_capacity(product) or 1.0
-            cycles = float_round(self.product_qty / capacity, precision_rounding=1, rounding_method='UP')
-            duration = cycles * operation.time_cycle * 100.0 / (workcenter.time_efficiency or 100.0) \
-                + workcenter._get_expected_duration(product)
-            total += duration / 60.0 * workcenter.costs_hour
+            total += operation.with_context(product=product, quantity=self.product_qty).cost
         return total
 
 #EoF
