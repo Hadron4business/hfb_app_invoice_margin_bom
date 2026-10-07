@@ -1,0 +1,4 @@
+id,name,model_id,group_id/id,operation,domain
+access_account_move_extra_cost_invoice,account.move.extra.cost invoicing,account.move.extra.cost,account.group_account_invoice,r,
+access_account_move_extra_cost_margin,account.move.extra.cost margin,account.move.extra.cost,group_invoice_margin,crud,
+account_move_extra_cost_company_rule,account.move.extra.cost multi-company,account.move.extra.cost,,crud,"[('move_id.company_id', 'in', company_ids)]"

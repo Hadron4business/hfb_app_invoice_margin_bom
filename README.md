@@ -33,4 +33,4 @@ Cost and margin of every customer invoice and credit note, line by line, with bi
 
 ## Status
 
-Odoo 19 build. Missing before publication: tests on 17/18/19/20, icon, banner.
+Odoo 20 build. Missing before publication: tests on 17/18/19/20, icon, banner.

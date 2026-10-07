@@ -10,10 +10,4 @@
         <field name="implied_ids" eval="[(4, ref('group_invoice_margin'))]"/>
     </record>
 
-    <record id="account_move_extra_cost_company_rule" model="ir.rule">
-        <field name="name">Invoice extra cost: multi-company</field>
-        <field name="model_id" ref="model_account_move_extra_cost"/>
-        <field name="domain_force">[('move_id.company_id', 'in', company_ids)]</field>
-    </record>
-
 </odoo>

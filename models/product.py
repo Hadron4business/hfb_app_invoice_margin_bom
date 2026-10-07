@@ -16,7 +16,7 @@
 # all copies or substantial portions of the Software.
 #
 #################################################################################
-"""	@version	19.0.1.0.0
+"""	@version	20.0.1.0.0
 	@owner  Hadron for Business
 	@author Hadron for Business sp. z o.o.
 	@date   2026.10.07
@@ -119,7 +119,7 @@ class ProductProduct(models.Model):
     def _bom_margin_bom_cost(self, bom, quantity, date, company, visited, depth):
         self.ensure_one()
         warnings = []
-        bom_qty = bom.product_uom_id._compute_quantity(bom.product_qty, self.uom_id)
+        bom_qty = bom.uom_id._compute_quantity(bom.product_qty, self.uom_id)
         if not bom_qty:
             warnings.append(_("%s: the bill of materials produces 0 - 1 assumed.", self.display_name))
             bom_qty = 1.0
@@ -129,7 +129,7 @@ class ProductProduct(models.Model):
             if not line.product_id or line._skip_bom_line(self):
                 continue
             cost, _source, line_warnings = line.product_id._bom_margin_cost(
-                line.product_qty * factor, line.product_uom_id, date, company, visited, depth + 1)
+                line.product_qty * factor, line.uom_id, date, company, visited, depth + 1)
             total += cost
             warnings += line_warnings
         if company.bom_margin_operations:
